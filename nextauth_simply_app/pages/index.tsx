@@ -32,6 +32,12 @@ const Home: NextPage = () => {
           <>
             You are signed In!
             as {session.user.email || session.user.name}
+            <button onClick={
+              (e) => {
+                e.preventDefault();
+                signOut();
+              }
+            }></button>
           </>
         )}
       </main>
